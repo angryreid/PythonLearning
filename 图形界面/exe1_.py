@@ -18,14 +18,15 @@ class Application(Frame):
         self.helloLabel.pack()
         self.nameInput = Entry(self)
         self.nameInput.pack()
-        self.alertButton = Button(self,text='click',command=self.hello)
+        self.alertButton = Button(self, text='click', command=self.hello)
         self.alertButton.pack()
         self.quitButton = Button(self, text='Quit', command=self.quit)
         self.quitButton.pack()
 
     def hello(self):
         name = self.nameInput.get() or 'world'
-        messagebox.showinfo('Message','Hello, %s' % name)
+        messagebox.showinfo('Message', 'Hello, %s' % name)
+
 
 app = Application()
 app.master.title('ooo eneneen')

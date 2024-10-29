@@ -2,9 +2,9 @@
 # -*- coding:utf-8 -*-
 __author__ = 'derek'
 
-if 1>2:
-    print(Ture)
-elif 1==1:
+if 1 > 2:
+    print(True)
+elif 1 == 1:
     print(True)
 else:
     print(False)
@@ -31,7 +31,7 @@ print('ABC'.encode('ascii'))
 print('中国'.encode('utf-8'))
 # 转字符
 print(b'abc'.decode('ascii'))
-print(b'\xe4\xb8\xad\xe5\x9b\xbd'.decode('utf-8',errors='ignore'))
+print(b'\xe4\xb8\xad\xe5\x9b\xbd'.decode('utf-8', errors='ignore'))
 # length
 print(len('asdf'))
 print(len('中国'))
