@@ -21,7 +21,6 @@ print(f.read())
 print(f.readline())
 f.close()
 
-
 # 要读取二进制文件，图片，视频，用‘rb’模式打开
 
 png = open('C:/Users/admin/Desktop/fan.png', 'rb')
@@ -31,9 +30,9 @@ png.close()
 
 #  f = open('/Users/michael/gbk.txt', 'r', encoding='gbk', errors='ignore')
 
-f2 = open('C:/Users/admin/Desktop/ads.txt','w')
+f2 = open('C:/Users/admin/Desktop/ads.txt', 'w')
 f2.write('hello ooohenenen')
-_f2 = open('C:/Users/admin/Desktop/ads.txt','r',encoding='')
+_f2 = open('C:/Users/admin/Desktop/ads.txt', 'r', encoding='')
 print(_f2.read())
 
 # with open('/Users/michael/test.txt', 'w') as f:
