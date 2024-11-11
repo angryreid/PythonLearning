@@ -19,14 +19,15 @@ def copy_task(source, destination):
     """
     if not os.path.exists(source) or not os.path.isdir(source):
         return
-    if not os.path.exists(destination):
-        os.makedirs(destination)
+
     file_list = os.listdir(source)
     for f in file_list:
         f_path = os.path.join(source, f)
         t_path = os.path.join(destination, f)
 
         if os.path.isfile(f_path) and f.endswith('.py'):
+            if not os.path.exists(destination):
+                os.makedirs(destination)
             copy_py(f_path, t_path)
         elif os.path.isdir(f_path):
             copy_task(f_path, t_path)
