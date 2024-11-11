@@ -9,11 +9,19 @@ Description:
 """
 
 
-def main():
+def read():
     file = open('../assets/sample.txt')
     print(file.read())
     file.close()
 
 
+def write():
+    file = open('../assets/write.txt', 'w')
+    for i in range(10):
+        file.write('Hello Nick\n')
+    file.close()
+
+
 if __name__ == "__main__":
-    main()
+    read()
+    write()
