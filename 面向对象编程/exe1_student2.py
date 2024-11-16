@@ -6,8 +6,8 @@ __author__ = 'derek'
 class Student(object):
     def __init__(self, name, score):
         # 使用两个下划线定义私有变量
-        # __name__ 这样的是特殊变量，可以直接访问
-        # _name 一个下划线这种变量，外面可以访问，但是不要随意访问
+        # __name__ 这样的是特殊变量，可以直接访问 | Private
+        # _name 一个下划线这种变量，外面可以访问，但是不要随意访问 | Protect
         self.__name = name
         self.__score = score
 
