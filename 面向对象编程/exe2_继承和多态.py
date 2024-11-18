@@ -3,7 +3,7 @@
 __author__ = 'derek'
 
 
-class Animal(object):
+class Animal:
     def run(self):
         print('Animal is running...')
 
