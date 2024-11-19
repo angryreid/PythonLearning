@@ -10,6 +10,8 @@ Description:
 
 
 class Ball:
+    __price = ''
+
     def __init__(self, name, *args, **kwargs):
         self.name = name
         print('Ball init...')
@@ -40,6 +42,11 @@ def main():
     # Even this is multiple extending, but still as order
     # (<class '__main__.BasketTableTennis'>, <class '__main__.TableTennis'>, <class '__main__.BasketBall'>, <class '__main__.Ball'>, <class 'object'>)
     btt = BasketTableTennis(name='btt', size='small', shape='circle')
+    # print(btt.__price)
+    # print(btt in Ball) # not working
+    print(isinstance(btt, Ball))
+    print(isinstance(btt, BasketBall))
+    print(isinstance(btt, TableTennis))
     print(BasketTableTennis.__mro__)
 
 
