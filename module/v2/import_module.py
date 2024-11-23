@@ -8,10 +8,13 @@ Description:
 
 """
 from math import log2
+from mutilple_extend import BasketTableTennis
 
 
 def main():
     print(f'log2(8): {log2(8)}')
+    btt = BasketTableTennis(name='btt', size='large', shape='parallelbox')
+    print(btt)
 
 
 if __name__ == "__main__":
