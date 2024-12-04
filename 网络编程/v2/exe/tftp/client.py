@@ -25,7 +25,7 @@ pkg_struct = struct.pack(pkg_format, 2, file_name_byte, 0, 'octet'.encode('utf8'
 
 client_sk.sendto(pkg_struct, server_addr)
 
-new_file_name = file_name[:file_name.rindex('.')] + f'_{random.randint(1, 1000)}_{random.randint(1, 1000)}_' + file_name[file_name.rindex('.'):]
+new_file_name = file_name[:file_name.rindex('.')] + f'_{random.randint(1, 1000)}_{random.randint(1, 1000)}' + file_name[file_name.rindex('.'):]
 
 
 try:
