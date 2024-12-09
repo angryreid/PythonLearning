@@ -28,4 +28,4 @@ while True:
 
     session_socket.close()
 
-server_socket.close()
+# server_socket.close()

@@ -1,6 +1,7 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
 __author__ = 'derek'
+
 # 在Thread和Process中，应当优选Process，因为Process更稳定，而且，Process可以分布到多台机器上，而Thread最多只能分布到同一台机器的多个CPU上
 
 # task_master.py
@@ -13,9 +14,11 @@ task_queue = queue.Queue()
 # 接收结果的队列:
 result_queue = queue.Queue()
 
+
 # 从BaseManager继承的QueueManager:
 class QueueManager(BaseManager):
     pass
+
 
 # 把两个Queue都注册到网络上, callable参数关联了Queue对象:
 QueueManager.register('get_task_queue', callable=lambda: task_queue)

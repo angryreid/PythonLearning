@@ -8,7 +8,7 @@ import os, time, random
 
 # 写数据进程执行的代码
 def write(q):
-    print('Processs to Write: %s' % os.getpid())
+    print('Processors to Write: %s' % os.getpid())
     for value in ['A', 'B', 'C']:
         print('Put %s to queue...' % value)
         q.put(value)
