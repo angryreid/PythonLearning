@@ -43,9 +43,10 @@ import time, threading
 # print(balance)
 
 # 我们必须确保一个线程在修改balance的时候，别的线程一定不能改。
-import time, threading
+import threading
 
 money = 0
+lock = threading.Lock()
 
 
 def change_it(n):
@@ -55,22 +56,9 @@ def change_it(n):
     print('当前进程是:%s,当前money：%s,当前n:%s' % (threading.current_thread().name, money, n))
 
 
-def run_thread(n):
-    for i in range(100):
-        change_it(n)
-
-
-t1 = threading.Thread(target=run_thread, args=(5,), name='t1')
-t2 = threading.Thread(target=run_thread, args=(8,), name='t2')
-t1.start()
-t2.start()
-t1.join()
-t2.join()
-print(money)
-
-balance = 0
-lock = threading.Lock()
-
+# def run_thread(n):
+#     for i in range(100):
+#         change_it(n)
 
 def run_thread(n):
     for i in range(100000):
@@ -82,3 +70,12 @@ def run_thread(n):
         finally:
             # 改完了一定要释放锁:
             lock.release()
+
+
+t1 = threading.Thread(target=run_thread, args=(5,), name='t1')
+t2 = threading.Thread(target=run_thread, args=(8,), name='t2')
+t1.start()
+t2.start()
+t1.join()
+t2.join()
+print(money)
