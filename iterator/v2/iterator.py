@@ -23,16 +23,15 @@ class MyIterator(object):
             return 2
         else:
             while True:
+                self.num += 1
                 for i in range(2, self.num):
                     if self.num % i == 0:
-                        self.num += 1
                         break
                     # elif self.num - 1 == i:
                     #     self.num += 1
                     #     return self.num - 1
                 else:
-                    self.num += 1
-                    return self.num - 1
+                    return self.num
 
 
 def main():
