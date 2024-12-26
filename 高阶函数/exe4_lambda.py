@@ -16,5 +16,5 @@ def f(x):
 f2 = lambda x: x * x
 print(f2(5))
 
-L3 = list(filter(lambda x:x%2==1,range(1,20)))
+L3 = list(filter(lambda x: x % 2 == 1, range(1, 20)))
 print(L3)
