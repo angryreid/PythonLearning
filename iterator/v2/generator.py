@@ -42,11 +42,31 @@ def generating_prime():
             yield num
 
 
+def generating_odd():
+    n = 1
+    while True:
+        n += 2
+        yield n
+
+
+def generating_prime_plus():
+    n = 2
+    if n == 2:
+        yield 2
+    g_odd = generating_odd()
+    while True:
+        n = next(g_odd)
+        yield n
+        g_odd = filter(lambda x: x % n != 0, g_odd)
+
+
 if __name__ == "__main__":
     # expression_generator()
     #
     # for x in yield_generator():
     #     print(x)
-    g = generating_prime()
+    # g = generating_prime()
+    # g = generating_odd()
+    g = generating_prime_plus()
     for i in range(10):
         print(next(g))
