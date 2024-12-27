@@ -1,6 +1,7 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
 __author__ = 'derek'
+
 # 正则表达式
 #   匹配
 # *     任意个字符，包括0
@@ -29,18 +30,19 @@ __author__ = 'derek'
 #  $ 表示以什么结束 \d$ 以数字结束
 
 import re
-reg = re.match(r'^\d{3}\-\d{3,8}$','001-123456')
-reg2 = re.match(r'^\d{3}\-\d{3,8}$','001 123456')
+
+reg = re.match(r'^\d{3}\-\d{3,8}$', '001-123456')
+reg2 = re.match(r'^\d{3}\-\d{3,8}$', '001 123456')
 print(reg)
 print(reg2)
 
 str = 'a b   c'
 print(str.split(' '))
 # print(re.split(r'\s+',str)) 使用re模块自带的字符串分割
-print(re.split(r'\s+',str))
+print(re.split(r'\s+', str))
 
 str2 = 'a,b   c  ,d;t;uiu,wee'
-print(re.split(r'[\s\,\;]+',str2))
+print(re.split(r'[\s\,\;]+', str2))
 
 # 除了判断是否匹配成功之外，可以直接从匹配的字符串，提取子串的功能
 # () 表示提取的分组
@@ -52,4 +54,3 @@ print(m.group(2))
 print(m.group(3))
 # 正则匹配默认是贪婪匹配
 #
-

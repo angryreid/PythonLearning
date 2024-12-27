@@ -1,6 +1,7 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
 __author__ = 'derek'
+
 import re
 
 time = '15:38:56'
@@ -22,7 +23,7 @@ print(t.group(3))
 # print(t2.group(3))
 
 date = '04-31'
-d = re.match(r'^(0[0-9]|1[0-2]|[0-9])-(1[0-9]|2[0-9]|3[0-1]|[0-9])',date)
+d = re.match(r'^(0[0-9]|1[0-2]|[0-9])-(1[0-9]|2[0-9]|3[0-1]|[0-9])', date)
 print(d.group(0))
 print(d.group(1))
 print(d.group(2))
