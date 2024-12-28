@@ -11,6 +11,7 @@ print(next(g))
 print(next(g))
 print(next(g))
 
+
 # for n in g:
 #     print(n)
 
@@ -44,13 +45,17 @@ def odd():
     print('step 1')
     yield 1
     print('step 2')
-    yield(3)
+    yield (3)
     print('step 3')
-    yield(5)
+    yield (5)
+
+
 o = odd()
 print(next(o))
 print(next(o))
 print(next(o))
+
+
 # print(next(o))
 # print(next(o))
 
@@ -62,6 +67,7 @@ def fib(max):
         n = n + 1
     return 'done'
 
+
 for n in fib(6):
     print(n)
 
@@ -69,15 +75,19 @@ f = fib(6)
 while True:
     try:
         x = next(f)
-        print('g:',x)
+        print('g:', x)
     except StopIteration as e:
-        print('Generator return value:',e.value)#catch exception
+        print('Generator return value:', e.value)  # catch exception
         break
+
+
 def triangles():
     L = [1]
     while True:
         yield L
-        L = [1] + [L[n]+L[n+1] for n in range(len(L)-1)] + [1]
+        L = [1] + [L[n] + L[n + 1] for n in range(len(L) - 1)] + [1]
+
+
 # 期待输出:
 # [1]
 # [1, 1]
